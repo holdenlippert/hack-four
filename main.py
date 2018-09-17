@@ -2,4 +2,3 @@
 import game
 
 game.Game().mainloop()
-print "Hello"
