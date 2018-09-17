@@ -13,16 +13,15 @@ class Token(pygame.sprite.Sprite):
         self.size = 50
         self.speed = 10
         self.playerID = playerID
-        img = "token_blue.png" if playerID == 1 else "token_red.png"
+        img = "images/token_blue.png" if playerID == 1 else "images/token_red.png"
 
         self.image = pygame.Surface((self.size, self.size), pygame.SRCALPHA)
         self.image = pygame.transform.scale(pygame.image.load(img), (self.size, self.size))
         #self.image.fill(self.color)
 
-        self.yellow = pygame.transform.scale(pygame.image.load("token_yellow.png"), (self.size - 8, self.size - 8))
+        self.yellow = pygame.transform.scale(pygame.image.load("images/token_yellow.png"), (self.size - 8, self.size - 8))
         self.winimage = pygame.transform.scale(pygame.image.load(img), (self.size, self.size))
         self.winimage.blit(self.yellow, (4, 4))
-
 
 
         self.rect = self.image.get_rect()

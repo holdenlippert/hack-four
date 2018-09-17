@@ -15,10 +15,10 @@ class Magnet(pygame.sprite.Sprite):
         self.screen = screen
         self.size = 40
         self.active = False
-        img = "magnet.png"
+        img = "images/magnet.png"
         
         self.activeimage = pygame.transform.rotate(pygame.transform.scale(pygame.image.load(img), (self.size, self.size)), rot)
-        self.inactiveimage = pygame.transform.rotate(pygame.transform.scale(pygame.image.load("magnet_grayscale.png"), (self.size, self.size)), rot)
+        self.inactiveimage = pygame.transform.rotate(pygame.transform.scale(pygame.image.load("images/magnet_grayscale.png"), (self.size, self.size)), rot)
         self.image = self.inactiveimage
 
         self.rect = self.image.get_rect()

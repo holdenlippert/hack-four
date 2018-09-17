@@ -15,10 +15,10 @@ class Grid(pygame.sprite.Sprite):
         self.image = pygame.Surface((self.surfacesize, self.surfacesize), pygame.SRCALPHA)
         self.image.fill((40, 40, 40))
         square = pygame.Surface((100, 100), pygame.SRCALPHA)
-        square.blit(pygame.transform.scale(pygame.image.load("a2.png"), (50, 50)), (0, 0))
-        square.blit(pygame.transform.scale(pygame.image.load("a3.png"), (50, 50)), (50, 0))
-        square.blit(pygame.transform.scale(pygame.image.load("a1.png"), (50, 50)), (0, 50))
-        square.blit(pygame.transform.scale(pygame.image.load("a4.png"), (50, 50)), (50, 50))
+        square.blit(pygame.transform.scale(pygame.image.load("images/a2.png"), (50, 50)), (0, 0))
+        square.blit(pygame.transform.scale(pygame.image.load("images/a3.png"), (50, 50)), (50, 0))
+        square.blit(pygame.transform.scale(pygame.image.load("images/a1.png"), (50, 50)), (0, 50))
+        square.blit(pygame.transform.scale(pygame.image.load("images/a4.png"), (50, 50)), (50, 50))
 
 
         for x in range(0, 600, 105):
