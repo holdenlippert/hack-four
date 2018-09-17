@@ -87,6 +87,10 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == pygame.KEYUP:
+                    Game().mainloop()
+                    self.quit()
+
             for path in self.wins:
                 toks = [self.grid.getToken(x, y) for x, y in path]
                 if all([not tok.moving() for tok in toks]):
