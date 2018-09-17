@@ -34,8 +34,8 @@ class Game:
         magnet.activate()
         self.magnets.add(magnet)
         self.magnets.add(Magnet(self.screen, 5, 342, 270, self.grid.gravLeft))
-        self.magnets.add(Magnet(self.screen, 342, 5, 180, self.grid.gravLeft))
-        self.magnets.add(Magnet(self.screen, 680, 342, 90, self.grid.gravLeft))
+        self.magnets.add(Magnet(self.screen, 342, 5, 180, self.grid.gravUp))
+        self.magnets.add(Magnet(self.screen, 680, 342, 90, self.grid.gravRight))
 
         self.hovertoken = [pygame.sprite.LayeredUpdates(Token(0, self.screen, 0, 0)),
                            pygame.sprite.LayeredUpdates(Token(1, self.screen, 0, 0))]
