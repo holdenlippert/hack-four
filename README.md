@@ -3,7 +3,7 @@
 This is a variation on Connect 4 where gravity can act in any cardinal direction (toggled by the magnets on the sides of the screen). The concept was part of a project I worked on for HackRice 2018. We didn't finish but I wanted to see it through here.
 
 I tried to make a standalone executable, but py2app is a nightmare, so to play this game you'll either have to install pygame or you'll have to just have to watch the [demo](https://youtu.be/4UytITUvdHo):
-![](demo/demo.gif)
+![](demo/demo.gif =300x300)
 
 ## Running
 This project is built with pygame, so you must have that installed. To run the game, execute the main.py file.
