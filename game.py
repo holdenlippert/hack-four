@@ -1,10 +1,27 @@
 #!/usr/bin/env python
+print "Importing sys...",
 import sys
+print "Imported sys"
+
+print "Importing pygame...",
 import pygame
+print "Imported pygame"
+
+print "Importing pygame.locals...",
 import pygame.locals
+print "Imported pygame.locals"
+
+print "Importing grid...",
 from grid import Grid
-from token import Token
+print "Imported grid"
+
+print "Importing token...",
+from gametoken import Token
+print "Imported token."
+
+print "Importing magnet...",
 from magnet import Magnet
+print "Imported magnet"
 
 def indexToPixels(x, y):
     return (105 * x + 75, 105 * y + 75)
@@ -14,10 +31,17 @@ def pixelToIndex(x, y):
 
 class Game:
     def __init__(self):
+        print "Initializing Game..."
+        print "Initializing pygame...",
         pygame.init()
+        print "Initialized pygame.",
+
+        print "Initializing display...",
         pygame.display.set_caption('Hack Four')
         self.screen = pygame.display.set_mode((725, 725), 0, 32)
         self.screen.fill((40, 40, 40))
+        print "Initialized display."
+
         self.gridSurface = pygame.Surface((625, 625))
         self.clock = pygame.time.Clock()
 
@@ -39,6 +63,7 @@ class Game:
 
         self.hovertoken = [pygame.sprite.LayeredUpdates(Token(0, self.screen, 0, 0)),
                            pygame.sprite.LayeredUpdates(Token(1, self.screen, 0, 0))]
+        print "Initialized Game."
 
     def pause(self):
         while True:
@@ -108,6 +133,7 @@ class Game:
 
 
     def mainloop(self):
+        print "Starting main loop"
         while True:
             map(self.handleEvent, pygame.event.get())
             self.grid.update()
